@@ -1,0 +1,13 @@
+{% if articles %}
+    <ul>
+    {% for article in articles %}
+        <li>
+            <a href="/news/{{ article.id }}/">{{ article.title }}</a>
+            <img src="D:\django_news_app\django-app\media\{{ article.image }}"width=”60”>
+            <p>{{ article.text }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No news are available.</p>
+{% endif %}
